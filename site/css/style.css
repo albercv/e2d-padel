@@ -1927,6 +1927,10 @@ footer em {
 /* My classes */
 
 .logo {
-	max-width: 100px;
+	max-width: 70px;
+	max-height: 70px;
+}
+
+.cartel {
 	max-height: 100px;
 }
