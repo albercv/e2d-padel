@@ -1989,3 +1989,14 @@ body, html {
 .cartelTournament {
 	max-height: 100em;
 }
+
+@media (max-width: 960px) {
+	
+.cartelTournament {
+	max-height: 20%;
+}
+.cartelTournament {
+	max-height: 20em;
+	border-radius: 15px 60px 30px 10px;
+}
+}
