@@ -370,7 +370,7 @@ footer em {
 	margin-bottom: 28px;
 }
 .gallery-box {
-	background: url(../img/bg_pic2.jpg) center 0 no-repeat;
+	background: url(../img/cartelPadel.png) center 0 no-repeat;
 	padding: 85px 0 72px 0;
 	margin-bottom: 58px;
 }
@@ -1947,10 +1947,6 @@ footer em {
 	padding-top: 500px;
 }
 
-.centrered {
-	
-}
-
 body, html {
     height: 100%;
 }
@@ -1979,4 +1975,17 @@ body, html {
 #Container div {
     position: relative;
     z-index: 1;
+}
+
+.cartelTournamentDiv {
+	max-width: 100%;
+	margin: 0 20%;
+	background-color: 433B39;
+	border-radius: 15px 90px 30px;
+  	border: 2px solid darkred;
+  	padding: 20px;
+}
+
+.cartelTournament {
+	max-height: 100em;
 }

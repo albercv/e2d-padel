@@ -81,11 +81,11 @@
                 <p>E-mail: <a href="#"><a href="mailto:hola@evolve2digital.com">hola@Evolve2digital.com</a></p>
             </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-8">
+        <div disabled class="col-lg-8 col-md-8 col-sm-8">
             <h2 class="indent">Contact Form</h2>
-            <form id="contact-form">
-                <div class="success-message">Contact form submitted.</div>
-                <div class="holder">
+            <form disabled id="contact-form">
+                <div disabled class="success-message">Contact form submitted.</div>
+                <div disabled class="holder">
                     <div class="form-div-1 clearfix">
                         <label class="name">
                             <input type="text" placeholder="Name*:" data-constraints="@Required @JustLetters" />
@@ -116,7 +116,7 @@
                     </label>
                 </div>
                 <div class="btns">
-                    <a href="#" data-type="submit" class="btn-default btn1">Submit</a>
+                    <a id="formButton" onclick="advise()" href="#" data-type="submit" class="btn-default btn1">Submit</a>
                     <p>* required fields</p>
                 </div>  
             </form>
@@ -131,6 +131,11 @@
         <p>Evolve2digital&copy; <em id="copyright-year"></em>. <a href="index-5.html">Privacy policy</a></p>
     </div>
 </footer>
+<script>
+    $( "#formButton" ).click(function() {
+        alert( "El formulario de contacto todavía no está disponible. Por favor contacta a través de whatsapp o email: hola@Evolve2digital.com - +34 676449433 - +34 663602201" );
+      });      
+</script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/tm-scripts.js"></script>
 </body>
