@@ -2011,3 +2011,14 @@ body, html {
 		border-radius: 15px 60px 30px 10px;
 	}
 }
+
+@media (min-width: 1081px) {
+	
+	.cartelTournament {
+		max-height: 20%;
+	}
+	.cartelTournament {
+		max-height: 50em;
+		border-radius: 15px 60px 30px 10px;
+	}
+}
