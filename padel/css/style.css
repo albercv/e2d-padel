@@ -2030,3 +2030,22 @@ body, html {
 		border-radius: 15px 60px 30px 10px;
 	}
 }
+
+
+.players {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+.players td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	font-size: 18px;
+	text-shadow: 1px 1px #fb6604;
+  }
+  
+.players tr:nth-child(3n+1) {
+	background-color: #dddddd;
+  }
