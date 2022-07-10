@@ -72,7 +72,7 @@
             <div class="col-lg-12 privacyBox"> 
                 <h2 class="indent">Participantes</h2>
                 <table class="players">
-                    <tr>
+                    <!-- <tr>
                         <th>Nombre</th>
                         <th>Equipo</th>
                         <th>Nº Pista</th>
@@ -183,7 +183,7 @@
                     <tr>
                         <th>Fernando</th>
                         <th>Por definir</th>
-                    </tr>
+                    </tr> -->
                 </table>
 
     </div>
@@ -199,7 +199,29 @@
 <script>
     function openInNewTab(url) {
         window.open(url, '_blank').focus();
-       }
+    }
+
+    
+
+    $( document ).ready(function() {
+        generateTable();   
+    });
+
+    function generateTable() {
+        console.log("Calling to method");
+        let tableHeaders = ["Nombre", "equipo", "Nº pista"]
+        appendTh(tableHeaders);
+    }
+
+    function appendTh(tableHeaders) {
+        console.log("Calling to append");
+        $(".players").append("<tr class='tableHeadersClass'></tr>");
+
+        $.each( tableHeaders, function( key, value ) {
+            $(".tableHeadersClass").append("<th>"+value+"</th>")
+        })
+
+    }
 </script>
 <!--coded by lynx-->
 </body>
