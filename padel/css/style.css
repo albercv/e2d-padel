@@ -1972,6 +1972,14 @@ body, html {
     z-index: 0;
 }
 
+.emailContact {
+	margin: 0 auto;
+	padding-top: 10px;
+	text-align: center;
+	font-size: 30px;
+	
+}
+
 #Container div {
     position: relative;
     z-index: 1;
@@ -2022,3 +2030,22 @@ body, html {
 		border-radius: 15px 60px 30px 10px;
 	}
 }
+
+
+.players {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+.players td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	font-size: 18px;
+	text-shadow: 1px 1px #fb6604;
+  }
+  
+.players tr:nth-child(3n+1) {
+	background-color: #dddddd;
+  }
