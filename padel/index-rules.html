@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>privacy policy</title>
+<title>Normativa</title>
 <meta charset="utf-8">    
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -73,120 +73,7 @@
             <div class="col-lg-12 privacyBox"> 
                 <h2 class="indent">Participantes</h2>
                 <table class="players">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Equipo</th>
-                        <th>Nº Pista</th>
-                    </tr>
-                    <tr>
-                        <th>Alberto</th>
-                        <th rowspan="2">1</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Francisco</th>   
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Equipo</th>
-                        <th>Nº Pista</th>
-                    </tr>
-                    <tr>
-                        <th>Bea</th>
-                        <th rowspan="2">2</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Silvia</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Equipo</th>
-                        <th>Nº Pista</th>
-                    </tr>
-                    <tr>
-                        <th>María G.</th>
-                        <th rowspan="2">3</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Elena M.</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Equipo</th>
-                        <th>Nº Pista</th>
-                    </tr>
-                    <tr>
-                        <th>Gari</th>
-                        <th rowspan="2">4</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Maxi</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Equipo</th>
-                        <th>Nº Pista</th>
-                    </tr>
-                    <tr>
-                        <th>Begoña</th>
-                        <th rowspan="2">5</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>José Luis</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Equipo</th>
-                        <th>Nº Pista</th>
-                    </tr>
-                    <tr>
-                        <th>Gabriel</th>
-                        <th rowspan="2">6</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Mari</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Equipo</th>
-                        <th>Nº Pista</th>
-                    </tr>
-                    <tr>
-                        <th>Javi</th>
-                        <th rowspan="2">7</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Manuela</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Equipo</th>
-                        <th>Nº Pista</th>
-                    </tr>
-                    <tr>
-                        <th>Juan Enrique</th>
-                        <th rowspan="2">8</th>
-                        <th>Por definir</th>
-                    </tr>
-                    <tr>
-                        <th>Fernando</th>
-                        <th>Por definir</th>
-                    </tr>
                 </table>
-
     </div>
 </div>
 <!--footer-->
@@ -200,7 +87,62 @@
 <script>
     function openInNewTab(url) {
         window.open(url, '_blank').focus();
-       }
+    }
+
+    
+
+    $( document ).ready(function() {
+        generateTable();   
+    });
+
+    function generateTable() {
+        console.log("Calling to method");
+        
+        let names= ["Alberto", "Fran", "Bea", "Silvia", "Jaime", "Francisco", "Gari", "Maxi", "Bego", "JoseL", "Gabri", "Mari", "Javi", "Manuela"]
+        var playerNames = {1: {name0:"alberto", name1:"Francisco", court:"12"},
+        2: {name0:"Bea", name1:"Silvia", court:"10"},
+        3: {name0:"Jaime", name1:"Francisco", court:"12"},
+        4: {name0:"Gari", name1:"Maxi", court:"9"},
+        5: {name0:"Bego", name1:"JoseL", court:"11"},
+        6: {name0:"Gabri", name1:"Mari", court:"9"},
+        7: {name0:"Javi", name1:"Manuela", court:"11"},
+        8: {name0:"JuanE", name1:"Fernando", court:"10"}}
+
+        appendTd(playerNames);
+    }
+
+    function appendTd(tablePlayers) {
+        $.each( tablePlayers, function( key, value ) {
+            $(".players").append("<tr class='tableHeadersClass"+ key +"'></tr>");
+            appendTh(key);
+            $(".players").append("<tr class='tablePlayerClass"+ key +"'></tr>");
+            generatePlayer(key, value)
+        })
+    }
+
+    function generatePlayer(key, value) {
+            row = $(".tablePlayerClass" + key)
+            row.append("<th>"+value["name0"]+"</th>")
+            row.append("<th rowspan='2'>"+key+"</th>")
+            row.append("<th rowspan='2'>"+value["court"]+"</th>")
+
+            $(".players").append("<tr class='tablePlayerClass"+ key+1 +"'></tr>");
+            $(".tablePlayerClass" + key+1).append("<td>"+value["name1"]+"</td>")
+    }
+
+    function appendTh(position) {
+        var tableHeaders = ["Nombre", "equipo", "Pista inicial"]
+        console.log("Calling to append");
+        
+
+        $.each( tableHeaders, function( key2, value ) {
+            $(".tableHeadersClass" + position).append("<td>"+value+"</td>")
+        })
+    }
+
+    function openInNewTab(url) {
+        window.open(url, '_blank').focus();
+    }  
 </script>
 <!--coded by lynx-->
 </body>
