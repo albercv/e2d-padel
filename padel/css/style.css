@@ -2049,3 +2049,8 @@ body, html {
 .players tr:nth-child(3n+1) {
 	background-color: #dddddd;
   }
+
+  
+  table, th, td {
+	border: 2px solid black;
+  }
